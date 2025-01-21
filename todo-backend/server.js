@@ -9,6 +9,8 @@ const MONGO_URI = process.env.MONGO_URI;
 const app = express();
 app.use(express.json());
 
+console.log("code")
+
 // Enable CORS for specific origin (change to your frontend URL)
 const corsOptions = {
     origin: 'https://todo-frontend-three-theta.vercel.app', // Adjust with your frontend URL
