@@ -8,8 +8,8 @@ const MONGO_URI = process.env.MONGO_URI;
 
 //create an instance of express
 const app = express();
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 //Sample in-memory storage for todo items
 // let todos = [];
