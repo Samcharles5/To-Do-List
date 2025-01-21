@@ -9,7 +9,18 @@ const MONGO_URI = process.env.MONGO_URI;
 //create an instance of express
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+
+
+// Enable CORS for specific origin (change to your frontend URL)
+const corsOptions = {
+    origin: 'https://todo-frontend-three-theta.vercel.app', // Adjust with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
+  };
+  
+  app.use(cors(corsOptions));  // Use the configured CORS options
+
 
 //Sample in-memory storage for todo items
 // let todos = [];
