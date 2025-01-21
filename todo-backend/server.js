@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 const MONGO_URI = process.env.MONGO_URI;
+
+
 //create an instance of express
 const app = express();
 app.use(express.json())
